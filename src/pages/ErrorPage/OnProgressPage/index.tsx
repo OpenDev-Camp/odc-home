@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 // ANCHOR Styles
 import { useStyles } from './styles';
 
-export const NotFoundPage = React.memo(() => {
+export const OnProgressPage = React.memo(() => {
   const classes = useStyles();
 
   return (

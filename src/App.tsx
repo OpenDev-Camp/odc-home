@@ -10,7 +10,7 @@ export const App = React.memo(() => (
     <Router>
       <Switch>
         {/* SECTION: Sign In Page  */}
-        <Route exact path="/public" component={PublicPage} />
+        <Route exact path="/" component={PublicPage} />
         {/* SECTION: 404 Page  */}
         <Route component={NotFoundPage} />
       </Switch>

@@ -16,7 +16,6 @@ export const PublicPage = () => (
       <Switch>
         {/** SECTION */}
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/dashboard" component={HomePage} />
       </Switch>
     </Router>
   </GlobalProvider>
