@@ -11,7 +11,6 @@
     "@material-ui/lab": "^4.0.0-alpha.45",
     "@material-ui/pickers": "latest",
     "@material-ui/styles": "latest",
-    "@uploadcare/react-widget": "latest",
     "axios": "latest",
     "clsx": "latest",
     "core-util-is": "latest",
