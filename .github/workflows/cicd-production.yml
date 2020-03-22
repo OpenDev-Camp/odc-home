@@ -27,18 +27,10 @@ jobs:
       - name: Print message upon completion of yarn install
         run: echo "Dependencies installed successfully"
 
-      - name: Build package
-        uses: borales/actions-yarn@v2.0.0
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          cmd: build # will run `yarn build` command
-
-      - name: Print message upon completion of yarn build
-        run: echo "Build package created successfully"
-
-      - name: Deploy Github Pages
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: deploy # will run `yarn deploy` command
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
 
       - name: Print message on completion of gh-pages build
         run: echo "Build package deployed to gh-pages successfully."
