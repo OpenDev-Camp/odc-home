@@ -10,20 +10,21 @@ jobs:
   cicd_pipeline:
     name: Deploy to Github Pages
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [12.x]
         
     steps:
       - name: Install dependencies
-        run: yarn
+      - uses: actions/checkout@v1
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
         
       - name: Print message upon completion of yarn install
         run: echo "Dependencies installed successfully"
         
       - name: Build package
-        run: yarn build
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build # will run `yarn build` command
        
       - name: Print message upon completion of yarn build
         run: echo "Build package created successfully"
