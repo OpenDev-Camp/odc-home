@@ -1,0 +1,42 @@
+name: Github Pages
+
+on: 
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  cicd_pipeline:
+    name: Deploy to Github Pages
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [12.x]
+        
+    steps:
+      - name: Install dependencies
+        uses: Borales/actions-yarn@v2.1.0
+        with:
+          cmd: install 
+        
+      - name: Print message upon completion of yarn install
+        run: echo "Dependencies installed successfully"
+        
+      - name: Build package
+        uses: Borales/actions-yarn@v2.1.0
+        with:
+          cmd: build
+       
+      - name: Print message upon completion of yarn build
+        run: echo "Build package created successfully"
+        
+      - name: Deploy Github Pages
+        run: gh-pages -d build
+      
+      - name: Print message on completion of gh-pages build
+        run: echo "Build package deployed to gh-pages successfully." 
+      
+      - name: Print message on completion of CD Pipeline
+        run: echo "CD Pipeline finished successfully." 
