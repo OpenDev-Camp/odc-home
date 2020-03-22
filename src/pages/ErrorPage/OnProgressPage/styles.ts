@@ -1,3 +1,4 @@
+// ANCHOR Material
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(() => ({
@@ -5,26 +6,23 @@ export const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '77vh',
+    height: '100vh',
     textAlign: 'center',
-    position: 'absolute',
-    maxWidth: '50vw',
-    left: '35%',
   },
   heading: {
-    fontSize: '136px',
+    fontSize: '236px',
     fontWeight: 100,
-    margin: '0px 0px -88px 0px',
+    margin: '-100px 0px -150px 0px',
     color: '#211b19',
     textTransform: 'uppercase',
   },
   body: {
-    fontSize: '15px',
+    fontSize: '28px',
     fontWeight: 400,
     textTransform: 'uppercase',
     color: '#211b19',
     background: '#FAFAFA',
-    padding: '10px 25px',
+    padding: '10px 20px',
     bottom: '50%',
     display: 'inline-block',
   },
