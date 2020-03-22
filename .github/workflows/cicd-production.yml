@@ -19,18 +19,24 @@ jobs:
       - name: Git clone odc home repository
         uses: actions/checkout@v1
 
-      - name: Install dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-
-      - name: Print message upon completion of yarn install
-        run: echo "Dependencies installed successfully"
+      - name: Clean Install dependencies and Build
+        run: |
+          yarn install
+          rm -rf build
+          yarn build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: 'build'
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
 
       - name: Print message on completion of gh-pages build
         run: echo "Build package deployed to gh-pages successfully."
