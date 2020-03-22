@@ -17,17 +17,13 @@ jobs:
         
     steps:
       - name: Install dependencies
-        uses: Borales/actions-yarn@v2.1.0
-        with:
-          cmd: install 
+        run: yarn
         
       - name: Print message upon completion of yarn install
         run: echo "Dependencies installed successfully"
         
       - name: Build package
-        uses: Borales/actions-yarn@v2.1.0
-        with:
-          cmd: build
+        run: yarn build
        
       - name: Print message upon completion of yarn build
         run: echo "Build package created successfully"
