@@ -1,14 +1,16 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { purple } from '@material-ui/core/colors';
+
+// ANCHOR Colors
+import * as COLORS from '@material-ui/core/colors';
 
 export const theme = createMuiTheme({
   typography: {
-    fontFamily: '"IBM Plex Sans", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
+    fontFamily: '"Nunito", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
   },
   palette: {
-    primary: purple,
+    primary: COLORS.purple,
     secondary: {
-      main: '#f1eff2',
+      main: COLORS.purple[900],
     },
   },
 });

@@ -24,7 +24,7 @@ export const OnProgressPage = React.memo(() => {
             Page is still in progress, Come back later
           </h2>
         </div>
-        <Link className={classes.button} to="/public">
+        <Link className={classes.button} to="/">
           Go To Homepage
         </Link>
       </div>

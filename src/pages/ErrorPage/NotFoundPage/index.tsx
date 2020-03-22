@@ -24,7 +24,7 @@ export const NotFoundPage = React.memo(() => {
             404 - The Page can&apos;t be found
           </h2>
         </div>
-        <Link className={classes.button} to="/public">
+        <Link className={classes.button} to="/">
           Go To Homepage
         </Link>
       </div>
