@@ -23,14 +23,6 @@ jobs:
       - name: Print message upon completion of yarn install
         run: echo "Dependencies installed successfully"
 
-      - name: Build package
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-
-      - name: Print message upon completion of yarn build
-        run: echo "Build package created successfully"
-
       - name: Deploy Github Pages
         uses: borales/actions-yarn@v2.0.0
         with:
