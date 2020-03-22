@@ -1,6 +1,6 @@
 name: Github Pages
 
-on: 
+on:
   pull_request:
   push:
     branches:
@@ -10,32 +10,34 @@ jobs:
   cicd_pipeline:
     name: Deploy to Github Pages
     runs-on: ubuntu-latest
-        
+
     steps:
       - name: Git clone odc home repository
         uses: actions/checkout@v1
-        
+
       - name: Install dependencies
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
-        
+
       - name: Print message upon completion of yarn install
         run: echo "Dependencies installed successfully"
-        
+
       - name: Build package
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
-       
+
       - name: Print message upon completion of yarn build
         run: echo "Build package created successfully"
-        
+
       - name: Deploy Github Pages
-        run: gh-pages -d build
-      
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: deploy # will run `yarn deploy` command
+
       - name: Print message on completion of gh-pages build
-        run: echo "Build package deployed to gh-pages successfully." 
-      
+        run: echo "Build package deployed to gh-pages successfully."
+
       - name: Print message on completion of CD Pipeline
-        run: echo "CD Pipeline finished successfully." 
+        run: echo "CD Pipeline finished successfully."
