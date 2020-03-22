@@ -1,19 +1,19 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 // ANCHOR Content area margin
-const contentAreaMargin = '92px';
+const CONTENT_AREA_MARGIN = '92px';
 
 // ANCHOR Content area padding
-const contentAreaPaddingVertical = '32px';
+const CONTENT_AREA_PADDING_VERTICAL = '32px';
 
 export const useStyles = makeStyles({
   outer: {
     display: 'block',
-    marginLeft: contentAreaMargin,
-    marginRight: contentAreaMargin,
+    marginLeft: CONTENT_AREA_MARGIN,
+    marginRight: CONTENT_AREA_MARGIN,
   },
   inner: {
-    paddingTop: contentAreaPaddingVertical,
-    paddingBottom: contentAreaPaddingVertical,
+    paddingTop: CONTENT_AREA_PADDING_VERTICAL,
+    paddingBottom: CONTENT_AREA_PADDING_VERTICAL,
   },
 });
