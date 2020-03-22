@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 // ANCHOR Content area margin
-const CONTENT_AREA_MARGIN = '92px';
+const CONTENT_AREA_MARGIN = '96px';
 
 // ANCHOR Content area padding
 const CONTENT_AREA_PADDING_VERTICAL = '32px';
