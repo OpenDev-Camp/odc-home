@@ -4,6 +4,9 @@ import * as React from 'react';
 // ANCHOR Material
 import Grid from '@material-ui/core/Grid';
 
+// ANCHOR Models
+import { MobileView } from '../../../models/mobile-view/MobileView';
+
 // ANCHOR Components
 import { ODCampNavbarContainer } from './ODCampNavbarContainer';
 
@@ -15,7 +18,9 @@ export const ODCampNavbar = React.memo(() => {
 
   return (
     <Grid container className={classes.root}>
-      <ODCampNavbarContainer />
+      <MobileView.Provider>
+        <ODCampNavbarContainer />
+      </MobileView.Provider>
     </Grid>
   );
 });
