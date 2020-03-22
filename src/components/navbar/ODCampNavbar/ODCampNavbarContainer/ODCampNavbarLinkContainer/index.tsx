@@ -11,7 +11,7 @@ import { ODCampNavbarLinkItem } from './ODCampNavbarLinkItem';
 import { useStyles } from './styles';
 
 // ANCHOR Constants
-import { NAVBAR_CONSTANT } from './ODCampNavbarLinkItem/constants';
+import { NAVBAR_LINK_CONSTANT } from './constants';
 
 export const ODCampNavbarLinkContainer = React.memo(() => {
   const classes = useStyles();
@@ -19,7 +19,7 @@ export const ODCampNavbarLinkContainer = React.memo(() => {
   return (
     <Grid container className={classes.root}>
       {
-        NAVBAR_CONSTANT.map(({ label, href }) => (
+        NAVBAR_LINK_CONSTANT.map(({ label, href }) => (
           <ODCampNavbarLinkItem label={label} href={href} />
         ))
       }
