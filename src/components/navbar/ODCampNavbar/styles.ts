@@ -23,7 +23,7 @@ export const useStyles = makeStyles(() => ({
     position: 'fixed',
     width: NAVBAR_WIDTH,
     height: NAVBAR_HEIGHT,
-    backgroundColor: COLORS.purple[900],
+    backgroundColor: COLORS.purple[500],
     color: 'white',
   },
 }));

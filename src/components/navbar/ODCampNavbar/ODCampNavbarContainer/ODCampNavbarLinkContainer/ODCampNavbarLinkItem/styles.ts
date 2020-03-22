@@ -12,7 +12,7 @@ export const useStyles = makeStyles(() => ({
     color: 'inherit',
     marginLeft: NAVBAR_LINK_ITEM_MARGIN,
     '&:hover': {
-      color: COLORS.purple[900],
+      color: COLORS.purple[500],
     },
   },
 }));

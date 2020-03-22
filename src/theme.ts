@@ -10,7 +10,7 @@ export const theme = createMuiTheme({
   palette: {
     primary: COLORS.purple,
     secondary: {
-      main: COLORS.purple[900],
+      main: COLORS.purple[500],
     },
   },
 });
