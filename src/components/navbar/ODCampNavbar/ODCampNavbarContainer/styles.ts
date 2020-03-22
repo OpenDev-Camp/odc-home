@@ -7,12 +7,15 @@ const NAVBAR_CONTAINER_WIDTH = '100%';
 const NAVBAR_CONTAINER_HEIGHT = '100%';
 
 // ANCHOR Navbar Container Padding
-const NAVBAR_CONTAINER_PADDING = '40px';
+const NAVBAR_CONTAINER_PADDING_SMALL = '24px';
+const NAVBAR_CONTAINER_PADDING_MEDIUM = '32px';
+const NAVBAR_CONTAINER_PADDING_LARGE = '32px';
+const NAVBAR_CONTAINER_PADDING_XLARGE = '40px';
 
 // ANCHOR Brand Font Size
 const BRAND_FONT_SIZE = '22px';
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',
@@ -20,8 +23,30 @@ export const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     width: NAVBAR_CONTAINER_WIDTH,
     height: NAVBAR_CONTAINER_HEIGHT,
-    paddingLeft: NAVBAR_CONTAINER_PADDING,
-    paddingRight: NAVBAR_CONTAINER_PADDING,
+
+    // ANCHOR padding on small devices
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: NAVBAR_CONTAINER_PADDING_SMALL,
+      paddingRight: NAVBAR_CONTAINER_PADDING_SMALL,
+    },
+
+    // ANCHOR padding on medium devices
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: NAVBAR_CONTAINER_PADDING_MEDIUM,
+      paddingRight: NAVBAR_CONTAINER_PADDING_MEDIUM,
+    },
+
+    // ANCHOR padding on small devices
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: NAVBAR_CONTAINER_PADDING_LARGE,
+      paddingRight: NAVBAR_CONTAINER_PADDING_LARGE,
+    },
+
+    // ANCHOR padding on small devices
+    [theme.breakpoints.up('xl')]: {
+      paddingLeft: NAVBAR_CONTAINER_PADDING_XLARGE,
+      paddingRight: NAVBAR_CONTAINER_PADDING_XLARGE,
+    },
   },
   logo: {
     fontSize: BRAND_FONT_SIZE,
