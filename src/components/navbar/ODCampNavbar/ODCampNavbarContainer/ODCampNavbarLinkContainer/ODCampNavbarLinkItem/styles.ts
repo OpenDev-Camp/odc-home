@@ -9,10 +9,10 @@ const NAVBAR_LINK_ITEM_MARGIN = '40px';
 export const useStyles = makeStyles(() => ({
   root: {
     textDecoration: 'none',
-    color: 'white',
+    color: 'inherit',
     marginLeft: NAVBAR_LINK_ITEM_MARGIN,
     '&:hover': {
-      color: COLORS.purple[100],
+      color: COLORS.purple[900],
     },
   },
 }));

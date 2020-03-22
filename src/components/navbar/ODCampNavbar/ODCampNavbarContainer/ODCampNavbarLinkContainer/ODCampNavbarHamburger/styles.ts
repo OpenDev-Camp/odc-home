@@ -5,7 +5,7 @@ const NAVBAR_HAMBURGER_MARGIN = '-8px';
 
 export const useStyles = makeStyles(() => ({
   root: {
-    color: 'white',
+    color: 'inherit',
     marginRight: NAVBAR_HAMBURGER_MARGIN,
   },
 }));

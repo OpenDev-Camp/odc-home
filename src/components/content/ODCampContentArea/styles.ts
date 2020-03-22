@@ -7,7 +7,7 @@ const CONTENT_AREA_MARGIN_LARGE = '96px';
 const CONTENT_AREA_MARGIN_XLARGE = '120px';
 
 // ANCHOR Content area padding
-const CONTENT_AREA_PADDING_VERTICAL = '32px';
+const CONTENT_AREA_PADDING_VERTICAL = '128px';
 
 export const useStyles = makeStyles((theme) => ({
   outer: {

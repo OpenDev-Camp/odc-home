@@ -12,6 +12,15 @@ const NAVBAR_HEIGHT = '96px';
 export const useStyles = makeStyles(() => ({
   root: {
     display: 'grid',
+    position: 'fixed',
+    width: NAVBAR_WIDTH,
+    height: NAVBAR_HEIGHT,
+    backgroundColor: 'inherit',
+    color: 'inherit',
+  },
+  scrolled: {
+    display: 'grid',
+    position: 'fixed',
     width: NAVBAR_WIDTH,
     height: NAVBAR_HEIGHT,
     backgroundColor: COLORS.purple[900],
