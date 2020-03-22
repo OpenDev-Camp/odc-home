@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { GlobalProvider } from './components/GlobalProvider';
 import { NotFoundPage } from './pages/ErrorPage/NotFoundPage';
