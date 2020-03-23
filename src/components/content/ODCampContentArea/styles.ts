@@ -6,9 +6,6 @@ const CONTENT_AREA_MARGIN_MEDIUM = '88px';
 const CONTENT_AREA_MARGIN_LARGE = '96px';
 const CONTENT_AREA_MARGIN_XLARGE = '120px';
 
-// ANCHOR Content area padding
-const CONTENT_AREA_PADDING_VERTICAL = '128px';
-
 export const useStyles = makeStyles((theme) => ({
   outer: {
     display: 'block',
@@ -37,8 +34,5 @@ export const useStyles = makeStyles((theme) => ({
       marginRight: CONTENT_AREA_MARGIN_XLARGE,
     },
   },
-  inner: {
-    paddingTop: CONTENT_AREA_PADDING_VERTICAL,
-    paddingBottom: CONTENT_AREA_PADDING_VERTICAL,
-  },
+  inner: {},
 }));

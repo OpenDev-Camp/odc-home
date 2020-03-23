@@ -1,23 +1,15 @@
 // ANCHOR React
 import * as React from 'react';
 
-// ANCHOR React Router
-
-// ANCHOR Material UI
-import { Typography } from '@material-ui/core';
-
-// ANCHOR Models
-
 // ANCHOR Components
 import { ODCampPage } from '../../../components/ODCampPage';
 import { ODCampContentArea } from '../../../components/content/ODCampContentArea';
+import { ODCampLanding } from '../../../components/landing/ODCampLanding';
 
 export const HomePage = () => (
   <ODCampPage>
     <ODCampContentArea>
-      <Typography>
-        Home Page
-      </Typography>
+      <ODCampLanding />
     </ODCampContentArea>
   </ODCampPage>
 );
