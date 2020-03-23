@@ -12,9 +12,6 @@ const NAVBAR_CONTAINER_PADDING_MEDIUM = '32px';
 const NAVBAR_CONTAINER_PADDING_LARGE = '32px';
 const NAVBAR_CONTAINER_PADDING_XLARGE = '40px';
 
-// ANCHOR Brand Font Size
-const BRAND_FONT_SIZE = '22px';
-
 export const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -47,9 +44,5 @@ export const useStyles = makeStyles((theme) => ({
       paddingLeft: NAVBAR_CONTAINER_PADDING_XLARGE,
       paddingRight: NAVBAR_CONTAINER_PADDING_XLARGE,
     },
-  },
-  logo: {
-    fontSize: BRAND_FONT_SIZE,
-    fontWeight: 500,
   },
 }));
