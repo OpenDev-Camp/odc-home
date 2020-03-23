@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // ANCHOR React Router
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // ANCHOR Global Provider
 import { GlobalProvider } from '../../components/GlobalProvider';
